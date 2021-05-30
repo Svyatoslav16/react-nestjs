@@ -25,6 +25,8 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error'],
+        'import/prefer-default-export': [0],
+        'no-useless-constructor': [0],
         'prettier/prettier': [
             'warn',
             {

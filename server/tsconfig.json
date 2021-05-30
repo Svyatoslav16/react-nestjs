@@ -18,7 +18,7 @@
         // Import non-ES modules as default imports.
         "esModuleInterop": true,
         // use typescript to transpile jsx to js
-        "baseUrl": "./src",
+        // "baseUrl": "./src",
         "module": "esnext",
         "removeComments": true,
         "alwaysStrict": true,
@@ -31,10 +31,10 @@
         "noFallthroughCasesInSwitch": true,
         "forceConsistentCasingInFileNames": true,
         "importHelpers": true,
-        "typeRoots": [
-            "src/@types",
-            "node_modules/@types"
-        ]
+        // "typeRoots": [
+        //     "src/@types",
+        //     "node_modules/@types"
+        // ]
     },
     "include": [
         "./src/**/*"
