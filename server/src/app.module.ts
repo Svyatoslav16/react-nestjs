@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { GraphQLModule } from '@nestjs/graphql';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -10,6 +11,10 @@ import { CategoriesModule } from './categories/categories.module';
 @Module({
     imports: [
         MongooseModule.forRoot('mongodb://localhost/nest'),
+        GraphQLModule.forRoot({
+            autoSchemaFile: 'schema.gql',
+            sortSchema: true,
+        }),
         ProductModule,
         CategoriesModule,
     ],

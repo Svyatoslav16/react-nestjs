@@ -6,9 +6,6 @@ export type ProductDocument = Product & mongoose.Document;
 
 @Schema()
 export class Product {
-    @Prop({ required: true })
-    id: number;
-
     @Prop({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',

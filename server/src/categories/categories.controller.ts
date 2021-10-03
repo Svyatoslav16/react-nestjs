@@ -17,9 +17,16 @@ export class CategoriesController {
 
     @Post()
     async create(@Body() createCategoryDto: CreateCategoryDto) {
-        console.log('createCategoryDto: ', createCategoryDto);
-        this.categoryService.create(createCategoryDto);
-
-        return 'ok';
+        // TODO: prettie return, return value example:
+        // {
+        //     "_id": "6159d22a9538222d676d4c34", - It shouldn't be.
+        //     "category": "6159ce2911f7b128c314d256",
+        //     "name": "Product6",
+        //     "price": 123,
+        //     "count": 10,
+        //     "image_path": "/src/image_path",
+        //     "__v": 0 - It shouldn't be.
+        // }
+        return this.categoryService.create(createCategoryDto);
     }
 }

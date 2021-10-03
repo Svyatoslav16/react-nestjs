@@ -1,5 +1,4 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-// import { CategoryDocument } from 'src/categories/category.schema';
 import { CreateProductDto } from './dto/create-product.dto';
 
 import { Product } from './product.schema';
@@ -11,16 +10,11 @@ export class ProductController {
 
     @Get()
     async findAll(): Promise<Product[]> {
-    // async findAll(): Promise<CategoryDocument> {
-        const productList = await this.productService.findAll();
-        return productList;
+        return this.productService.findAll();
     }
 
     @Post()
     async create(@Body() createProductDto: CreateProductDto) {
-        console.log('createProductDto: ', createProductDto);
-        this.productService.create(createProductDto);
-
-        return 'ok';
+        return this.productService.create(createProductDto);
     }
 }
